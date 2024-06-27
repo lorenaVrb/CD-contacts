@@ -1,0 +1,85 @@
+$light: #ffffff;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #3c173f, #664267, #937092, #c2a0bf, #f2d4ef);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.contact-sub {
+  color: $light;
+}
+
+.flip-card {
+  color: $light;
+  width: 300px;
+  height: 25em;
+  border: 1px solid $light;
+  perspective: 1000px;
+}
+
+a {
+  text-decoration: none !important;
+  color: $light !important;
+}
+
+a:hover {
+  text-shadow: 5px 2px 5px $light;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.contact-sub {
+  font-size: 1.5em;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  color: $light;
+  transform: rotateY(180deg);
+}
+
+.card-text {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+}
+.form-container input,
+textarea {
+  background-color: transparent;
+  color: $light;
+  outline: $light;
+  border: 1px solid $light;
+}
+input::placeholder, textarea::placeholder{
+  color: #b0aeae;
+}
